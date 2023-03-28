@@ -1,10 +1,11 @@
 import React from "react";
+import Comment from "../Comment";
 
 const Comments = ({ comments }) => {
   return (
     <div className="comments-container">
       {comments.map((ele) => (
-        <div className="comment">{ele}</div>
+        <Comment comment={ele} />
       ))}
     </div>
   );
