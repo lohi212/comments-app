@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Comments from "./Comments";
 
+const sendCommentImg = require("../images/comment.png");
+
 const CommentsContainer = () => {
   const [comments, setComments] = useState([]);
   const [value, setValue] = useState("");
@@ -24,7 +26,7 @@ const CommentsContainer = () => {
           }}
         />
         <button onClick={handleOk} className="button-container">
-          Ok
+          <img src={sendCommentImg} width="25px" />
         </button>
       </div>
       <Comments comments={comments} />
