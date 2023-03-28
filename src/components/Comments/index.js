@@ -1,7 +1,13 @@
 import React from "react";
 
 const Comments = ({ comments }) => {
-  return comments.map((ele) => <div>{ele}</div>);
+  return (
+    <div className="comments-container">
+      {comments.map((ele) => (
+        <div className="comment">{ele}</div>
+      ))}
+    </div>
+  );
 };
 
 export default Comments;

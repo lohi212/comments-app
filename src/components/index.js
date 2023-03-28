@@ -11,12 +11,17 @@ const CommentsContainer = () => {
   };
 
   return (
-    <div className="comments-container">
+    <div className="root-container">
       <div className="input-wrapper">
         <input
-          onChange={(e) => setValue(e.target.value)}
+          onChange={(e) => {
+            setValue(e.target.value);
+          }}
           className="input-container"
           value={value}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") handleOk();
+          }}
         />
         <button onClick={handleOk} className="button-container">
           Ok
