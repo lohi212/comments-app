@@ -43,3 +43,7 @@
   font-size: 12px;
   color: #5252ef;
 }
+
+.cursor {
+  cursor: pointer;
+}

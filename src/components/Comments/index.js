@@ -1,11 +1,11 @@
 import React from "react";
 import Comment from "../Comment";
 
-const Comments = ({ comments }) => {
+const Comments = ({ comments, setComments }) => {
   return (
     <div className="comments-container">
-      {comments.map((ele) => (
-        <Comment comment={ele} />
+      {Object.keys(comments || {}).map((ele) => (
+        <Comment comment={ele} comments={comments} setComments={setComments} />
       ))}
     </div>
   );
