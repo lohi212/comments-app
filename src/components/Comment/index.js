@@ -6,7 +6,7 @@ const Comment = ({ comment, comments, setComments }) => {
   const [isReplyClicked, setIsReplyClicked] = useState(false);
 
   const { id, text } = comment;
-  const children = comments.filter((i) => i.parentId === id);
+
   return (
     <div className="comment-container">
       <span className="user-name">Dummy name</span>
@@ -29,7 +29,7 @@ const Comment = ({ comment, comments, setComments }) => {
         </span>
       )}
 
-      <Comments pID={id} comments={children} setComments={setComments} />
+      <Comments pID={id} comments={comments} setComments={setComments} />
     </div>
   );
 };

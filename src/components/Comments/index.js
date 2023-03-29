@@ -3,6 +3,7 @@ import Comment from "../Comment";
 
 const Comments = ({ comments, setComments, pID }) => {
   const filteredComments = comments.filter((i) => i.parentId === pID);
+
   return (
     <div className="comments-container">
       {(filteredComments || []).map((comment) => (
