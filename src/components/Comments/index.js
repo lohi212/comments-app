@@ -1,11 +1,17 @@
 import React from "react";
 import Comment from "../Comment";
 
-const Comments = ({ comments, setComments }) => {
+const Comments = ({ comments, setComments, pID }) => {
+  const filteredComments = comments.filter((i) => i.parentId === pID);
   return (
     <div className="comments-container">
-      {Object.keys(comments || {}).map((ele) => (
-        <Comment comment={ele} comments={comments} setComments={setComments} />
+      {(filteredComments || []).map((comment) => (
+        <Comment
+          comment={comment}
+          key={comment.id}
+          comments={comments}
+          setComments={setComments}
+        />
       ))}
     </div>
   );
